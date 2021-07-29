@@ -1,0 +1,15 @@
+version: '3'
+
+networks:
+  default:
+    external:
+      name: network
+
+services:
+
+  pingbot:
+    container_name: pingbot
+    image: slth13/pingbot:1.0
+    restart: always
+    volumes:
+      - ./config.yaml:/usr/src/app/config.yaml
